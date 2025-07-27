@@ -1,10 +1,10 @@
 # case types
+
 # snake_case
 # SCREAMING_SNAKE_CASE
 # camelCase
 # PascalCase
 # kebab-case
-# We can use these cases to make words
 
 
 # arithmetic operators
@@ -61,7 +61,7 @@ print(students[0:5:2])
 print(students[5::-1])
 
 
-# slicing is also for str
+# Slicing and indexing are also for strings
 fruit = "watermelon"
 print(fruit[0:5])
 
