@@ -98,3 +98,25 @@ other_students = students.copy()
 print(other_students)
 other_students.clear()
 print(other_students)
+
+# exercise
+# replace two items with each other
+# replace 1 & 4
+my_list = [1, 2, 3, 4]
+print(my_list)
+
+x = my_list.pop()  # 4
+my_list.insert(0, x)
+y = my_list.pop(1)  # 1
+my_list.append(y)
+print(my_list)
+
+# other way out
+# replace 3, 2
+my_list = [1, 2, 3, 4]
+print(my_list)
+
+x = my_list[2]  # 3
+my_list.remove(x)
+my_list.insert(1, x)
+print(my_list)
