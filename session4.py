@@ -52,7 +52,5 @@ print(a)
 a.symmetric_difference_update(b)  # modifies the first set so that it contains all elements from a-b U b-a
 print(a)
 
-print("AAA")
-print(b)
 a.intersection_update(b)  # modifies the first set, so it only contains the elements in common with b
 print(a)
