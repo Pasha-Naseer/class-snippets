@@ -55,10 +55,29 @@ for i in range(1, 6):
 
 print("\n")
 
+
 for i in range(1, 8):
     for j in range(1, 10):
         if j == 1+i or j == 9-i or j == 5:
             print("*", end=" ")
         else:
             print(" ", end=" ")
+    print()
+
+
+print("\n")
+
+
+for i in range(1, 6):
+    for j in range(1, 12):
+        if i in [1, 2, 3]:
+            if j == 3+i or j == 4-i or j == 8+i or j == 9-i:
+                print("*", end=" ")
+            else:
+                print(" ", end=" ")
+        elif i in [4, 5]:
+            if j == i-2 or j == 9-i or j == 3+i or j == 14-i:
+                print("*", end=" ")
+            else:
+                print(" ", end=" ")
     print()
