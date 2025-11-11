@@ -20,7 +20,7 @@ if gmail.endswith("@gmail.com"):
                                 valid = False
                         if not first_part[i] == '.' and not first_part[i] == '_' and not first_part[i] == '-':
                             final_test += first_part[i]
-                    if not final_test.isalnum():
+                    if not final_test.isalnum() and not final_test.isascii():
                         valid = False
                 else:
                     valid = False
