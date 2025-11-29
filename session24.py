@@ -7,7 +7,7 @@ resp = requests.get(url)
 data = resp.json()
 
 # humidity
-# observation_time - Elin
+# observation_time
 # uvIndex
 # windspeedKmph
 # weatherDesc - value
@@ -16,17 +16,13 @@ data = resp.json()
 print(data['current_condition'][0])
 
 # print(data['current_condition'][0]['temp_C'])
-
 # uvindex = int(data['current_condition'][0]['uvIndex'])
 # if uvindex in range(0, 3):
 #     print('این اشعه یووی برای بیشتر افراد ریسک خاصی ندارد، همچنین احتمال آفتاب سوختگی بسیار ضعیف می باشد مگر اینکه پوست خیلی حساسی داشته باشید.\nمراقبت های لازم:\nعینک آفتابی و کرم ضد آفتاب اختیاری می باشد.')
 # uvindex ranges
-# import math
-# print(math.cos(math.radians(325)))
 
 # observation_time
 observation_time = data['current_condition'][0]['observation_time']
-
 
 print(f"زمان ثبت اطلاعات هواشناسی\n{observation_time}")
 print('لطفا با توجه به زمان ثبت اطلاعات هواشناسی و زمان کنونی از برنامه استفاده کنید!')
@@ -72,26 +68,26 @@ wind_speed = int(data['current_condition'][0]['windspeedKmph'])
 print('سرعت وزش باد')
 print(f"{wind_speed} کیلومتر بر ساعت")
 print('-' * 10)
-while True:
-    try:
-        weight = int(input("وزن خودتان را وارد کنید.\n(حالا وارد کن بهت میگم چرا)"))
-    except ValueError:
-        print("ورودی اشتباه!")
-    else:
-        if weight in range(1, 635):
-            break
-        else:
-            print('لطفا وزن درستی را وارد کنید!')
-
-wind_mass = (weight * 1000) / 0.98
-wind_volume = (wind_mass / 1000000) * 1.225
-wind_degree = int(data['current_condition'][0]['winddirDegree'])
-# wind_degree = 0
-cos_wind_degree = math.cos(math.radians(wind_degree))
-kinetic_energy = (0.5 * wind_volume) * (wind_speed * (5/18)) ** 2
-if kinetic_energy * cos_wind_degree > weight * 10:
-    print("با توجه به بررسی های انجام شده توسط گروهی از دانشمندان در کلاس 69 اعم از پروفسور ارشان افتخاری(نجوم دان، اخترفیزیک دان، فیزیک دان) و پروفسور مهدی نصیرسلطانی(مهندس نرم افزار، اخترفیزیکدان، و دریاسالار)\nامروز در صورت خروج از خانه باد شما را خواهد برد!")
-elif kinetic_energy * cos_wind_degree == weight * 10:
-    print("با توجه به بررسی های انجام شده توسط گروهی از دانشمندان در کلاس 69 اعم از پروفسور ارشان افتخاری(نجوم دان، اخترفیزیک دان، فیزیک دان) و پروفسور مهدی نصیرسلطانی(مهندس نرم افزار، اخترفیزیکدان، و دریاسالار)\nامروز در صورت خروج از خانه شاید باد شما را ببرد!")
-else:
-    print("با توجه به بررسی های انجام شده توسط گروهی از دانشمندان در کلاس 69 اعم از پروفسور ارشان افتخاری(نجوم دان، اخترفیزیک دان، فیزیک دان) و پروفسور مهدی نصیرسلطانی(مهندس نرم افزار، اخترفیزیکدان، و دریاسالار)\nامروز در صورت خروج از خانه باد شما را نخواهد برد!")
+# while True:
+#     try:
+#         weight = int(input("وزن خودتان را وارد کنید.\n(حالا وارد کن بهت میگم چرا)"))
+#     except ValueError:
+#         print("ورودی اشتباه!")
+#     else:
+#         if weight in range(1, 635):
+#             break
+#         else:
+#             print('لطفا وزن درستی را وارد کنید!')
+#
+# wind_mass = (weight * 1000) / 0.98
+# wind_volume = (wind_mass / 1000000) * 1.225
+# wind_degree = int(data['current_condition'][0]['winddirDegree'])
+# # wind_degree = 0
+# cos_wind_degree = math.cos(math.radians(wind_degree))
+# kinetic_energy = (0.5 * wind_volume) * (wind_speed * (5/18)) ** 2
+# if kinetic_energy * cos_wind_degree > weight * 10:
+#     print("\nامروز در صورت خروج از خانه باد شما را خواهد برد!")
+# elif kinetic_energy * cos_wind_degree == weight * 10:
+#     print("\nامروز در صورت خروج از خانه شاید باد شما را ببرد!")
+# else:
+#     print("\nامروز در صورت خروج از خانه باد شما را نخواهد برد!")
