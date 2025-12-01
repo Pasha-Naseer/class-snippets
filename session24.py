@@ -15,12 +15,6 @@ data = resp.json()
 # nanometer
 print(data['current_condition'][0])
 
-# print(data['current_condition'][0]['temp_C'])
-# uvindex = int(data['current_condition'][0]['uvIndex'])
-# if uvindex in range(0, 3):
-#     print('این اشعه یووی برای بیشتر افراد ریسک خاصی ندارد، همچنین احتمال آفتاب سوختگی بسیار ضعیف می باشد مگر اینکه پوست خیلی حساسی داشته باشید.\nمراقبت های لازم:\nعینک آفتابی و کرم ضد آفتاب اختیاری می باشد.')
-# uvindex ranges
-
 # observation_time
 observation_time = data['current_condition'][0]['observation_time']
 
@@ -60,34 +54,3 @@ elif humidity >= 70:
     print("توصیه ها\n. حتما تهویه را به حداکثر برسانید.\n. در صورت امکان از خانه خارج نشوید.\n. به محلی با رطوبت پایین بروید.\n. مراقب علائم گرمازدگی و مشکلات تنفسی باشید.\n. سطوح را به طور منظم با مواد ضدقارچ تمیز کنید تا از رشد کپک و قارچ جلوگیری شود.")
     print('-' * 50)
 print()
-
-# wind speed
-print('-' * 50)
-wind_speed = int(data['current_condition'][0]['windspeedKmph'])
-# wind_speed = 400
-print('سرعت وزش باد')
-print(f"{wind_speed} کیلومتر بر ساعت")
-print('-' * 10)
-# while True:
-#     try:
-#         weight = int(input("وزن خودتان را وارد کنید.\n(حالا وارد کن بهت میگم چرا)"))
-#     except ValueError:
-#         print("ورودی اشتباه!")
-#     else:
-#         if weight in range(1, 635):
-#             break
-#         else:
-#             print('لطفا وزن درستی را وارد کنید!')
-#
-# wind_mass = (weight * 1000) / 0.98
-# wind_volume = (wind_mass / 1000000) * 1.225
-# wind_degree = int(data['current_condition'][0]['winddirDegree'])
-# # wind_degree = 0
-# cos_wind_degree = math.cos(math.radians(wind_degree))
-# kinetic_energy = (0.5 * wind_volume) * (wind_speed * (5/18)) ** 2
-# if kinetic_energy * cos_wind_degree > weight * 10:
-#     print("\nامروز در صورت خروج از خانه باد شما را خواهد برد!")
-# elif kinetic_energy * cos_wind_degree == weight * 10:
-#     print("\nامروز در صورت خروج از خانه شاید باد شما را ببرد!")
-# else:
-#     print("\nامروز در صورت خروج از خانه باد شما را نخواهد برد!")
