@@ -11,7 +11,7 @@ data = resp.json()
 # uvIndex
 # windspeedKmph
 # weatherDesc - value
-# 1.225 world density standard
+# 1.225 is world density standard
 # nanometer
 print(data['current_condition'][0])
 
@@ -53,4 +53,3 @@ elif humidity >= 70:
     print('-' * 50)
     print("توصیه ها\n. حتما تهویه را به حداکثر برسانید.\n. در صورت امکان از خانه خارج نشوید.\n. به محلی با رطوبت پایین بروید.\n. مراقب علائم گرمازدگی و مشکلات تنفسی باشید.\n. سطوح را به طور منظم با مواد ضدقارچ تمیز کنید تا از رشد کپک و قارچ جلوگیری شود.")
     print('-' * 50)
-print()
