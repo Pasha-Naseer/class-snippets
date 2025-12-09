@@ -1,4 +1,19 @@
 # See if the number is prime
+import math
+import time
+
+
+def p_prime(number):
+    if number > 1:
+        for i in range(2, number):
+            if number % i == 0:
+                return None
+        else:
+            return number
+    else:
+        return None
+
+
 def prime(number):
     if number > 1:
         for i in range(2, number):
@@ -8,6 +23,18 @@ def prime(number):
             return number
     else:
         return None
+
+
+# trying to compare the process time of the two functions
+x = time.time()
+print(prime(2345347856234767467425253643234567909876543456789876543456789876543456789876541))
+y = time.time()
+print(y - x)
+
+x = time.time()
+print(p_prime(2345347856234767467425253643234567909876543456789876543456789876543456789876541))
+y = time.time()
+print(y - x)
 
 
 def factor(number, primes):
