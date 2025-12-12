@@ -3,7 +3,7 @@ import math
 import time
 
 
-def p_prime(number):
+def prime(number):
     if number > 1:
         for i in range(2, number):
             if number % i == 0:
@@ -14,7 +14,7 @@ def p_prime(number):
         return None
 
 
-def prime(number):
+def prime2(number):
     if number > 1:
         for i in range(2, math.ceil(math.sqrt(number))):
             if number % i == 0:
@@ -27,15 +27,15 @@ def prime(number):
 
 # trying to compare the process time of the two functions
 x = time.time()
-print(prime(2345347856234767467425253643234567909876543456789876543456789876543456789876541))
+print(prime2(2345347856234767467425253643234567909876543456789876543456789876543456789876541))
 y = time.time()
 print(y - x)
 
 x = time.time()
-print(p_prime(2345347856234767467425253643234567909876543456789876543456789876543456789876541))
+print(prime(2345347856234767467425253643234567909876543456789876543456789876543456789876541))
 y = time.time()
 print(y - x)
-
+# oh!
 
 def factor(number, primes):
     factor_list = []
