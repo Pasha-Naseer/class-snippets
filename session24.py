@@ -12,7 +12,6 @@ data = resp.json()
 # windspeedKmph
 # weatherDesc - value
 # 1.225 is world density standard
-# nanometer
 print(data['current_condition'][0])
 
 # observation_time

@@ -2,6 +2,8 @@ import math
 import time
 
 # See if the number is prime
+
+
 def prime(number):
     if number > 1:
         for i in range(2, number):
