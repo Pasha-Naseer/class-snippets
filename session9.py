@@ -98,6 +98,7 @@ print(kmm_calculator(first_factor, second_factor))
 def bmm_calculator(first_factor_list, second_factor_list):
     bmm_list = []
     result_list = []
+
     for b in first_factor_list:
         if b in second_factor_list:
             bmm_list.append(b)
@@ -122,3 +123,17 @@ def bmm_calculator(first_factor_list, second_factor_list):
 
 print("Greatest Common Divisor")
 print(bmm_calculator(first_factor, second_factor))
+
+
+# Euclidean Algorithm (for Greatest Common Divisor)
+def euclidean_gcd(number1, number2):
+    while True:
+        x = number1 % number2
+        if x == 0:
+            return number2
+        number1 = number2
+        number2 = x
+
+
+print("Greatest Common Divisor")
+print(euclidean_gcd(num, num2))
