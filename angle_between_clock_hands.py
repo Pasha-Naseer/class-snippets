@@ -1,8 +1,8 @@
 angle_between_consecutive_hour_marks = 360 / 12
 angle_between_consecutive_minute_marks = 360 / 60
 additional_hour_angle_per_every_minute = 30 / 60
-hour = int(input("hour: "))
-minute = int(input("minute: "))
+hour = int(input("Enter hour: "))
+minute = int(input("Enter minute: "))
 hour_angle = hour * angle_between_consecutive_hour_marks + (minute * additional_hour_angle_per_every_minute)
 minute_angle = minute * angle_between_consecutive_minute_marks
 
