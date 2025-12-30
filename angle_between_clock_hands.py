@@ -14,8 +14,9 @@ else:
     angle = 0
 
 angle2 = 360 - angle
-print(angle)
-print(f"Bigger angle {angle2}")
+print(f"smaller: {angle}")
+print(f"Bigger angle: {angle2}")
+# cannot identify smaller and bigger angel sometimes
 # I will add seconds to be able to track the exact overlap where the angle is 0!
 # This ccode will be updated
 # Bugs are yet to be fixed!
