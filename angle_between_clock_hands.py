@@ -1,6 +1,7 @@
 import time
 import datetime
 
+
 def angle_between_clock_hands(_hour, _minute):
     angle_between_consecutive_hour_marks = 360 / 12  # 30
     angle_between_consecutive_minute_marks = 360 / 60  # 6

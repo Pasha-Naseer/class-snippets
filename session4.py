@@ -30,15 +30,20 @@ b = {2, 6, 4}
 
 print(a.union(b))
 print(b.union(a))  # both give us the same result
+print(a | b)
 
 print(a.difference(b))
 print(b.difference(a))  # they are different
+print(a - b)
+print(b - a)
 
 print(a.intersection(b))
 print(b.intersection(a))  # both give us the same result
+print(a & b)
 
 print(a.symmetric_difference(b))
 print(b.symmetric_difference(a))  # both give us the same result
+print(a ^ b)
 
 print(a.isdisjoint(b))  # happens when they have nothing in common
 
