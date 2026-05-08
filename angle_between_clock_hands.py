@@ -1,5 +1,6 @@
-import time
 import datetime
+import pyttsx3
+
 
 def angle_between_clock_hands(_hour, _minute):
     angle_between_consecutive_hour_marks = 360 / 12  # 30
@@ -22,15 +23,18 @@ def angle_between_clock_hands(_hour, _minute):
 
     if angle > 180:
         angle2 = 360 - angle
-        print(f"smaller angle: {angle2}")
-        print(f"Bigger angle: {angle}")
+        # print(f"smaller angle: {angle2}")
+        # print(f"Bigger angle: {angle}")
+        return f"smaller angle: {angle2}\nBigger angle: {angle}"
     elif angle < 180:
         angle2 = 360 - angle
-        print(f"smaller angle: {angle}")
-        print(f"Bigger angle: {angle2}")
+        # print(f"smaller angle: {angle}")
+        # print(f"Bigger angle: {angle2}")
+        return f"smaller angle: {angle}\nBigger angle: {angle2}"
     else:
-        print("big angle and small angle are equal!")
-        print(angle)
+        # print("big angle and small angle are equal!")
+        # print(angle)
+        return f"big angle and small angle are equal!\n{angle}"
 
 # input custom hour
 while True:
@@ -59,14 +63,18 @@ while True:
         else:
             print("Invalid Input!")
 
-angle_between_clock_hands(h, m)
+print(angle_between_clock_hands(h, m))
 print("*"*30)
 # current angle between the time hands
 print("The angle between the current time clock hands:")
 print(datetime.datetime.now().strftime("%I : %M %p"))
 h = int(datetime.datetime.now().strftime("%#I"))
 m = int(datetime.datetime.now().minute)
-angle_between_clock_hands(h, m)
+print(angle_between_clock_hands(h, m))
+
+engine = pyttsx3.init()
+engine.say(angle_between_clock_hands(h, m))
+engine.runAndWait()
 
 # I will add seconds to be able to track the exact overlap where the angle is 0!
 # This code will be updated
