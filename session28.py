@@ -22,3 +22,24 @@ def recursive_factorial(n):
             return n
     else:
             return n * recursive_factorial(n-1)
+
+
+# lambda
+add = lambda a, b: a+b
+print(add(2, 3))
+
+# map
+numbers = [1, 2, 3, 4]
+squared = list(map(lambda x: x**2, numbers))
+print(squared)
+
+# reduce
+from functools import reduce
+x = [1, 2, 3, 4, 5, 6]
+total = reduce(add, x)
+print(total)
+
+# filter
+numbers = [1, 2, 3, 4, 5, 6]
+evens = list(filter(lambda x: x % 2 == 0, numbers))
+print(evens)
