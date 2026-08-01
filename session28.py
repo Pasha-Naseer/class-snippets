@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # functions
 
 # built-in
@@ -43,7 +42,7 @@ print(total)
 # filter
 numbers = [1, 2, 3, 4, 5, 6]
 evens = list(filter(lambda x: x % 2 == 0, numbers))
-=======
+
 # functions
 
 # built-in
@@ -88,5 +87,4 @@ print(total)
 # filter
 numbers = [1, 2, 3, 4, 5, 6]
 evens = list(filter(lambda x: x % 2 == 0, numbers))
->>>>>>> 4a0a8df55f69c37dad14bf139083784b6f53e8b7
 print(evens)

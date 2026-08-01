@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import time
 
 
@@ -21,7 +20,7 @@ def test_func():
 
 
 test_func()
-=======
+
 import time
 
 
@@ -44,4 +43,3 @@ def test_func():
 
 
 test_func()
->>>>>>> 4a0a8df55f69c37dad14bf139083784b6f53e8b7
