@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import time
 
 
@@ -20,3 +21,27 @@ def test_func():
 
 
 test_func()
+=======
+import time
+
+
+def process_time(func):
+    def wrapper():
+        start = time.time()
+        func()
+        elapsed_time = time.time() - start
+        print(f"Process time: {elapsed_time}")
+    return wrapper
+
+
+# decorator
+@process_time
+def test_func():
+    total = 1
+    for i in range(1, 1000):
+        total *= i
+    print(total)
+
+
+test_func()
+>>>>>>> 4a0a8df55f69c37dad14bf139083784b6f53e8b7
