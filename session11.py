@@ -137,4 +137,7 @@ class Centaur(Person, Horse):
         return f"{self.name} - {self.god}"
 
 
-print(Centaur("Chiron", "The Greek", 125, "Greek", "Zeus"))
+chiron = Centaur("Chiron", "The Greek", 125, "Greek", "Zeus")
+print(chiron)
+
+print(getattr(chiron, "breed", False))

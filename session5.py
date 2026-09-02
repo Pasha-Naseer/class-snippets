@@ -35,3 +35,10 @@ elif gender == "AI":
     print("Hello World!")
 else:
     print("Invalid Answer")
+
+
+# At least one True -> Returns True
+any([False, False, True, False])  # True
+
+# None are True -> Returns False
+any([False, False, False])        # False
